@@ -40,8 +40,8 @@ client_secret: # developer console
 guild_id: # server settings in discord
 #
 channel_scope:
-  - bot-dev
-  - house
+  - channel-name
+  - other-channel-name
 
 
 # Phillips Hue
@@ -76,17 +76,17 @@ Info message:
 ## **Technologies 🧰**
 <hr>
 
-- [Discord.py](https://google.com)
-- [Bot Examples](https://github.com/Rapptz/discord.py/tree/v2.1.1/examples)
-- [Typer](https://typer.tiangolo.com/)
-- [Phillips Hue](https://developers.meethue.com/develop/hue-api-v2/)
+  - [Discord.py](https://google.com)
+  - [Bot Examples](https://github.com/Rapptz/discord.py/tree/v2.1.1/examples)
+  - [Typer](https://typer.tiangolo.com/)
+  - [Phillips Hue](https://developers.meethue.com/develop/hue-api-v2/)
 
 <br />
 
 ## **Contribute 🤝**
 <hr>
 
-If you think you have a cool TODO idea, submit a PR 🤓
+If you think you have a cool smart light control idea, submit a PR 🤓
 
 <br />
 

@@ -23,7 +23,7 @@ colors = {
 
 #───Commands─────────────────
 def lv_logic(rid:str, dictation:str) -> str:
-  '''TODO.'''
+  '''parses words in dictation string, calls appropriate utils'''
 
   args = dictation.split(' ')
   if '' in args:
