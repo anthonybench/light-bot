@@ -33,7 +33,7 @@ def getLights() -> str:
       -X GET "https://{bridge_ip}/clip/v2/resource/light" \
       -H "hue-application-key: {username}" \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -43,7 +43,7 @@ def getRooms() -> str:
       -X GET "https://{bridge_ip}/clip/v2/resource/room" \
       -H "hue-application-key: {username}" \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -53,7 +53,7 @@ def getDevices() -> str:
       -X GET "https://{bridge_ip}/clip/v2/resource/device" \
       -H "hue-application-key: {username}" \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -63,7 +63,7 @@ def getLight(rid:str) -> str:
       -X GET "https://{bridge_ip}/clip/v2/resource/light/{rid}" \
       -H "hue-application-key: {username}" \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -73,7 +73,7 @@ def getGroupedLight(rid:str) -> str:
       -X GET "https://{bridge_ip}/clip/v2/resource/grouped_light/{rid}" \
       -H "hue-application-key: {username}" \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -84,7 +84,7 @@ def getRoom(rid:str) -> str:
       -H "hue-application-key: {username}" \
   '''
   request = request.replace('<rid>', rid)
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -96,7 +96,7 @@ def lightOnOff(rid:str, on_off:bool) -> str:
       -H "hue-application-key: {username}" \
       -d '{{"on":{{"on":{inject}}}}}' \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -108,7 +108,7 @@ def groupedLightOnOff(rid:str, on_off:bool) -> str:
       -H "hue-application-key: {username}" \
       -d '{{"on":{{"on":{inject}}}}}' \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -119,7 +119,7 @@ def setGroupedLightBrightness(rid:str, brightness:int) -> str:
       -H "hue-application-key: {username}" \
       -d '{{"dimming":{{"brightness":{brightness}}}}}' \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -130,7 +130,7 @@ def setGroupedLightColor(rid:str, color:Dict[str,float]) -> str:
       -H "hue-application-key: {username}" \
       -d '{{"color":{{"xy":{{"x":{color["x"]},"y":{color["y"]}}}}}}}' \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -141,7 +141,7 @@ def setLightBrightnessColor(rid:str, brightness:int, color:Dict[str,float]) -> s
       -H "hue-application-key: {username}" \
       -d '{{"dimming":{{"brightness":{brightness}}},"color":{{"xy":{{"x":{color["x"]},"y":{color["y"]}}}}}}}' \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
@@ -152,7 +152,7 @@ def setGroupedLightBrightnessColor(rid:str, brightness:int, color:Dict[str,float
       -H "hue-application-key: {username}" \
       -d '{{"dimming":{{"brightness":{brightness}}},"color":{{"xy":{{"x":{color["x"]},"y":{color["y"]}}}}}}}' \
   '''
-  output = check_output(request, shell=True, executable='/bin/zsh')
+  output = check_output(request, shell=True, executable='/bin/bash')
   output_str = output.decode("utf-8")
   return output_str
 
