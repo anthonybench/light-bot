@@ -1,0 +1,2 @@
+- stop using check_output, to avoid console printing
+  - remove all print statements for that matter
